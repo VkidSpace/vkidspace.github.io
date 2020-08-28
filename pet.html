@@ -553,8 +553,12 @@ function googleTranslateElementInit() {
                             </div>
                         </div>
                     </div>
+                     <script>
+                    	function PlaySound(soundobj) { var thissound=document.getElementById(soundobj); thissound.play(); } function StopSound(soundobj) { var thissound=document.getElementById(soundobj); thissound.pause(); thissound.currentTime = 0; }
+                    </script>
+                   
 
-                                        <div class="grid_col grid_col_12">
+                                        <div class="grid_col grid_col_12" onmouseover="PlaySound('mySound')" onmouseout="StopSound('mySound')">
                             <div class="ce clearfix">
                                 <div class="a-center">
                                     <div class="content_section">
@@ -566,6 +570,9 @@ function googleTranslateElementInit() {
                             </div>
                         </div>
                     </div>
+                   
+                    
+                   <audio id='mySound' src='pic/shop/frog.mp3'/>
                                             <!-- / product item -->
 
                                         </ul>
