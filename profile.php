@@ -1,3 +1,10 @@
+
+<?php
+
+// On démarre la session AVANT d'écrire du code HTML
+include 'getwhatever.php';
+
+?>
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -6,22 +13,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="shortcut icon" href="img/cropped-favicon-192x192.png" />
-    <title>VKidspace</title>
+    <title>Vkidspace</title>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 
+    <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+    <script src="js/modernizr.js"></script> <!-- Modernizr -->
+ <script type="text/javascript">
+            var pageURL = window.location.href;
+  var allNumbers = pageURL.replace(/[^0-9]/g, ' ').trim().split(/\s+/);
+  document.cookie="profile_uid="+allNumbers;
+
+</script>
     <link rel='stylesheet' href='css/font-awesome.css' type='text/css' media='all' />
     <link rel='stylesheet' href='css/jquery.fancybox.css' type='text/css' media='all' />
     <link rel='stylesheet' href='css/select2.css' type='text/css' media='all' />
     <link rel='stylesheet' href='css/animate.css' type='text/css' media='all' />
-    <link rel='stylesheet' href='css/main.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/main1.css' type='text/css' media='all' />
     <link rel='stylesheet' href='css/shop.css' type='text/css' media='all' />
     <script type='text/javascript' src='js/jquery.js'></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
     <script type='text/javascript' src='js/jquery-migrate.min.js'></script>
-     <script type='text/javascript' src='revslider/js/jquery.themepunch.tools.min.js'></script>
-    <script type='text/javascript' src='revslider/js/jquery.themepunch.revolution.min.js'></script>
-    <script type="text/javascript" src="revslider/js/extensions/revolution.extension.slideanims.min.js"></script>
-    <script type="text/javascript" src="revslider/js/extensions/revolution.extension.layeranimation.min.js"></script>
-    <script type="text/javascript" src="revslider/js/extensions/revolution.extension.navigation.min.js"></script>
-    <script type="text/javascript" src="revslider/js/extensions/revolution.extension.parallax.min.js"></script>    
     <link rel='stylesheet' href='tuner/style.css' type='text/css' media='all' />
     <link rel="icon" href="img/cropped-favicon-32x32.png" sizes="32x32" />
     <link rel="icon" href="img/cropped-favicon-192x192.png" sizes="192x192" />
@@ -29,8 +41,9 @@
     <meta name="msapplication-TileImage" content="img/cropped-favicon-270x270.png">
 </head>
 
-<body class="single single-product postid-70 woocommerce woocommerce-page wide wave-style">
-        <div id="google_translate_element"></div>
+<body class="archive post-type-archive post-type-archive-product woocommerce woocommerce-page wide wave-style">
+    
+    <div id="google_translate_element"></div>
 
 <script type="text/javascript">
 function googleTranslateElementInit() {
@@ -47,9 +60,10 @@ function googleTranslateElementInit() {
                 <canvas class='top_half_sin' data-bg-color='#ffffff' data-line-color='#ffffff'></canvas>
             </div>
             <!-- / canvas -->
+            <!-- top panekl main container -->
             <div class='container'>
                 <div class='row_text_search'>
-                  <div id='top_panel_text'><a href="tel:1-800-123-45678"><i class="fa fa-phone-square"></i> 009-715-691-74949 </a>;
+                    <div id='top_panel_text'><a href="tel:1-800-123-45678"><i class="fa fa-phone-square"></i> 009-715-691-74949 </a>;
                         <a href="mailto:mail@mail.com"> <i class="fa fa-envelope-o"></i>nadhim_skander@yahoo.fr</a>
                     </div>
                     <form method="get" class="search-form" action="#">
@@ -75,33 +89,50 @@ function googleTranslateElementInit() {
                                     <a href="#" class="remove" title="Remove this item">×</a>
                                     <a href="shop-single-product.html">
                                         <img width="180" height="180" src="pic/shop/58x58-bag.jpg" class="attachment-shop_thumbnail" alt="poster_2_up">Bag&nbsp; </a>
-                                    <span class="quantity">1 × <span class="amount">£12.00</span></span>
+                                  
                                 </li>
                                 <li>
                                     <a href="#" class="remove" title="Remove this item">×</a>
                                     <a href="shop-single-product.html">
                                         <img width="180" height="180" src="pic/shop/58x58-basket.jpg" class="attachment-shop_thumbnail" alt="T_7_front">Basket&nbsp; </a>
-                                    <span class="quantity">1 × <span class="amount">£18.00</span></span>
+                              
                                 </li>
                             </ul>
                             <!-- end product list -->
-                        
+                     
+                       
                         </div>
                     </div>
                     <div class="lang_bar">
-                        
+                        <div>
+                            <ul>
+                                <li>
+                       
+                                    </a>
+                                    <ul>
+                                        <li class="icl-fr">
+                                    
+                                        </li>
+                                        <li class="icl-de">
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="site_top_panel_toggle"></div>
             </div>
+            <!-- / top panel main container -->
         </div>
         <!-- / top panel -->
         <!-- header container -->
         <div class='header_cont'>
-             <div class='header_mask'>
-                    <div class='header_pattern'></div>
-                </div>
-                <header class='site_header logo-in-menu' data-menu-after="3">
+            <div class='header_mask'>
+                <div class='header_pattern'></div>
+                <div class='header_img'></div>
+            </div>
+             <header class='site_header logo-in-menu' data-menu-after="3">
                     <div class="header_box">
                         <div class="container">
                             <!-- logo -->
@@ -117,8 +148,8 @@ function googleTranslateElementInit() {
                                     </div>
                                     <ul id="menu-main-menu" class="main-menu menu-bees">
                                         <!-- menu item -->
-                                        <li class="menu-item current-menu-item page_item current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children bees-start">
-                                            <a href="pet.html">
+                                        <li class="menu-item  menu-item-has-children bees-start">
+                                            <a href="pet.php">
                                                 <div class="bees bees-start"><span></span>
                                                     <div class="line-one"></div>
                                                     <div class="line-two"></div>
@@ -136,7 +167,7 @@ function googleTranslateElementInit() {
                                         </li>
                                         <!-- / menu item -->
                                         <!-- menu item -->
-                                        <li class="menu-item menu-item-has-children"><a href="features-shop.html">Books<div class="canvas_wrapper"><canvas class="menu_dashed"></canvas></div></a>
+                                        <li class="menu-item menu-item-has-children"><a href="features-shop.php">Books<div class="canvas_wrapper"><canvas class="menu_dashed"></canvas></div></a>
                                             <span class='button_open'></span>
                                             <ul class="sub-menu">
                                                 <li class="menu-item back"><a href="#"><em>←</em>&nbsp;BACK</a>
@@ -160,7 +191,7 @@ function googleTranslateElementInit() {
                                         <!-- / menu item -->
                                         <!-- menu item -->
                                          <li class="menu-item right ">
-                                            <a href="store.html">
+                                            <a href="store.php">
                                                 <div class="bees bees-end"><span></span>
                                                     <div class="line-one"></div>
                                                     <div class="line-two"></div>
@@ -190,134 +221,247 @@ function googleTranslateElementInit() {
                             <!-- / menu -->
                         </div>
                     </div>
-            </header>
+                </header>
             <!-- #masthead -->
         </div>
         <!-- / header container -->
         <!-- breadcrumbs -->
-        <section class='page_title wave'>
-            <div class='container'>
-                <div class='title'>
-                    <h1>Shop</h1></div>
-                <nav class="bread-crumbs"><a href="index-2.html" >Home</a><i class="delimiter fa fa-chevron-right"></i><span typeof="v:Breadcrumb"><a  href="features-shop.html">Products<i class="delimiter fa fa-chevron-right"></i></a></span><span class="current">Flying Ninja</span></nav>
-                <!-- .breadcrumbs -->
-            </div>
-            <canvas class='breadcrumbs' data-bg-color='#f8f2dc' data-line-color='#f9e8b2'></canvas>
-        </section>
+       
         <!-- / breadcrumbs -->
         <!-- main container -->
         <div id="main" class="site-main">
             <div class="page_content single_sidebar">
+                <!-- pattern container / -->
                 <div class="left-pattern pattern pattern-2"></div>
-                <div class="container">
+                <div class='container'>
                     <!-- sidebar -->
                     <aside class='sb_right'>
                         <!-- widget search -->
-                        <div class="cws-widget">
-                            <form method="get" class="woocommerce-product-search" action="#">
-                                <label class="screen-reader-text">Search for:</label>
-                                <input type="search" class="search-field" placeholder="Search Products&hellip;" value="" name="s" title="Search for:" />
-                                <input type="submit" value="Search" />
-                                <input type="hidden" name="post_type" value="product" />
-                            </form>
-                        </div>
-                        <!-- / widget search -->
-                        <!-- widget cart -->
-                     
-                        <!-- / widget cart -->
-                        <!-- widget top rated -->
-                        <div class="cws-widget">
-                          
-                        </div>
-                        <!-- / widget top rated -->
-                        <!-- widget recent viewed -->
-                        <div class="cws-widget">
-                          
-                        <!-- / widget recent viewed -->
+                        
+                        <!-- / widget gallery -->
                     </aside>
                     <!-- / sidebar -->
                     <!-- main content -->
                     <main>
-                        <div id="container">
-                            <div id="content" role="main">
-                                <div itemscope itemtype="http://schema.org/Product" id="product-70" class="post-70 product type-product status-publish has-post-thumbnail product_cat-posters sale shipping-taxable purchasable product-type-simple product-cat-posters instock">
-                                    <div class="images">
-                                        <div class="media_part">
-                                            <div class="pic">
-                                                <img src='pic/shop/270x270-blue-car.jpg' data-at2x='pic/shop/270x270-blue-car.jpg' alt />
-                                                <div class="hover-effect"></div>
-                                                <div class="links_popup">
-                                                    <div class="link_cont">
-                                                        <div class="link">
-                                                            <a href="pic/shop/tea-spot.jpg" itemprop="image" class="fancy woocommerce-main-image zoom" title="poster_2_up" data-rel="prettyPhoto[product-gallery]"><i class="fa fa-camera"></i></a>
+                        <?php  foreach(getanyuser($_GET['id']) as $v) {?>
+                        <div class="grid_row">
+                            <section class="cws_ourteam single">
+                                <div class="cws_wrapper">
+                                    <div class="cws_ourteam_items grid">
+                                        <article class="item clearfix">
+                                            <div  class='media_part' >
+                                                <div class='pic'><img src='<?php
+ 
+  echo $v['image'];?>' data-at2x='<?php
+ 
+  echo $v['image'];?>' alt width="300px" height="300px" />
+                                                </div>
+
+                                            </div>
+                                      
+ </article>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+<div  class="ce clearfix">
+
+                                               <div class="cws_progress_bar">
+                                        <div class="pb_title"> <h3>Name:</h3>  </div> <h3><?php
+ 
+  echo $v['nom'];
+?></h3>
+                                               <div class="cws_progress_bar">
+                                        <div class="pb_title"> <h3>Family Name:</h3>  </div> <h3><?php
+ 
+  echo $v['prenom'];
+?></h3>                                       <div class="cws_progress_bar">
+                                        <div class="pb_title"> <h3>phone:</h3>  </div> <h3><?php
+ 
+  echo $v['phone'];
+?></h3>   
+<div class="pb_title">      
+    <h3> pets :</h3>
+</div>
+<?php } ?>
+                             <br>
+
+
+ <ul class="products">
+<?php  foreach(getapet() as $v) {?>
+      <li id="<?php echo $v['pet_id'] ?>" class="first post-70 product type-product status-publish has-post-thumbnail product_cat-posters sale shipping-taxable purchasable product-type-simple product-cat-posters instock">
+                                        <div class="sale-wrapper">
+                                        </div>
+                                        <div class='media_part'>
+                                            <div class='pic'>
+                                                <img src='<?php echo $v['pic']; ?>' data-at2x='<?php echo $v['pic']; ?>' alt>
+                                                <div class='links_popup animate'>
+                                                    <div class='link_cont'>
+                                                        <div class='link'>
+                                                            <a class='fancy' href='<?php echo $v['pic']; ?>'><i class='fa fa-camera'></i></a>
+                                                            <div class='link-item-bounce'></div>
+                                                        </div>
+                                                        <div class='link'>
+                                                            <a href='shop-single-product.html'><i class='fa fa-share'></i></a>
+                                                            <div class='link-item-bounce'></div>
                                                         </div>
                                                     </div>
+                                                    <div class='link-toggle-button'>
+                                                        <i class='fa fa-plus link-toggle-icon'></i>
+                                                    </div>
                                                 </div>
+                                                <div class='hover-effect'></div>
                                             </div>
+
+                             
                                         </div>
-                                        <div class="thumbnails columns-3">
-                                            <div class="media_part pic">
-                                                <div class="pic thumbnail">
-                                                    <a href="pic/shop/270x270-blue-car.jpg" class="zoom first fancy" title="Poster_2_flat" data-rel="prettyPhoto[product-gallery]">
-                                                        <div class="hover-effect"></div><img src='pic/shop/270x270-blue-car.jpg' data-at2x='pic/shop/270x270-blue-car.jpg' alt /></a>
+
+                                        <h3><?php echo $v['titre']; ?></h3>
+                                   
+                                        </span>
+                                        <div class="prop-description">
+                                            <p><?php echo $v['description']; ?></p>
+                                        </div>
+                                        <div class="gridlist-buttonwrap">
+
+                                            </div>
+
+
+                                        <hr />
+                                    </li>
+                                     <?php } ?>
+                                 </ul>
+                                 <div class="pb_title">
+                                 <h3>books :</h3>
+                             </div>
+                             <br>
+                             
+
+
+ <ul class="products">
+<?php  foreach(getabook() as $v) {?>
+      <li id="<?php echo $v['book_id'] ?>" class="first post-70 product type-product status-publish has-post-thumbnail product_cat-posters sale shipping-taxable purchasable product-type-simple product-cat-posters instock">
+                                        <div class="sale-wrapper">
+                                        </div>
+                                        <div class='media_part'>
+                                            <div class='pic'>
+                                                <img src='<?php echo $v['pic']; ?>' data-at2x='<?php echo $v['pic']; ?>' alt>
+                                                <div class='links_popup animate'>
+                                                    <div class='link_cont'>
+                                                        <div class='link'>
+                                                            <a class='fancy' href='<?php echo $v['pic']; ?>'><i class='fa fa-camera'></i></a>
+                                                            <div class='link-item-bounce'></div>
+                                                        </div>
+                                                        <div class='link'>
+                                                            <a href='shop-single-product.html'><i class='fa fa-share'></i></a>
+                                                            <div class='link-item-bounce'></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class='link-toggle-button'>
+                                                        <i class='fa fa-plus link-toggle-icon'></i>
+                                                    </div>
                                                 </div>
+                                                <div class='hover-effect'></div>
                                             </div>
+
+                             
                                         </div>
-                                    </div>
-                                    <div class="summary entry-summary">
-                                        <h1 itemprop="name" class="product_title entry-title">car</h1>
-                                        <div class="woocommerce-product-rating" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                                                <span style="width:80%">
+
+                                        <h3><?php echo $v['titre']; ?></h3>
+                                   
+                                        </span>
+                                        <div class="prop-description">
+                                            <p><?php echo $v['description']; ?></p>
+                                        </div>
+                                        <div class="gridlist-buttonwrap">
+
+                                            <form action="" method="post">
+</form></div>
+
+
+                                        <hr />
+                                    </li>
+                                     <?php } ?>
+                                 </ul>
+                                 <div class="pb_title">
+                                 <h3>toys :</h3>
+                             </div>
+                                                          <br>
+
+
+ <ul class="products">
+<?php  foreach(getatoy() as $v) {?>
+      <li id="<?php echo $v['toy_id'] ?>" class="first post-70 product type-product status-publish has-post-thumbnail product_cat-posters sale shipping-taxable purchasable product-type-simple product-cat-posters instock">
+                                        <div class="sale-wrapper">
+                                        </div>
+                                        <div class='media_part'>
+                                            <div class='pic'>
+                                                <img src='<?php echo $v['pic']; ?>' data-at2x='<?php echo $v['pic']; ?>' alt>
+                                                <div class='links_popup animate'>
+                                                    <div class='link_cont'>
+                                                        <div class='link'>
+                                                            <a class='fancy' href='<?php echo $v['pic']; ?>'><i class='fa fa-camera'></i></a>
+                                                            <div class='link-item-bounce'></div>
+                                                        </div>
+                                                        <div class='link'>
+                                                            <a href='shop-single-product.html'><i class='fa fa-share'></i></a>
+                                                            <div class='link-item-bounce'></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class='link-toggle-button'>
+                                                        <i class='fa fa-plus link-toggle-icon'></i>
+                                                    </div>
+                                                </div>
+                                                <div class='hover-effect'></div>
                                             </div>
-                                        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                            <p class="price">
-                                            </p>
-                                            <meta itemprop="price" content="12" />
-                                            <meta itemprop="priceCurrency" content="GBP" />
-                                            <link itemprop="availability" href="http://schema.org/InStock" />
+
+                             
                                         </div>
-                                        <div itemprop="description">
-                                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+
+                                        <h3><?php echo $v['titre']; ?></h3>
+                                   
+                                        </span>
+                                        <div class="prop-description">
+                                            <p><?php echo $v['description']; ?></p>
+                                      
                                         </div>
-                                        <form class="cart" method="post" enctype='multipart/form-data'>
-                                            <div class="quantity">
-                                                <input disabled="true" type="number" step="1" min="1" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" />
-                                            </div>
-                                            <input type="hidden" name="add-to-cart" value="70" />
-                                            <button type="submit" class="single_add_to_cart_button button alt">Borrow</button>
-                                        </form>
-                                        <div class="product_meta">
-                                            <span class="posted_in">Category: <a href="features-shop.html" rel="tag">car</a></span>
-                                        </div>
-                                    </div>
-                                    <!-- .summary -->
-                                    <div class="woocommerce-tabs wc-tabs-wrapper cws_ce_content ce_tabs">
-                                        <div class="tabs wc-tabs">
-                                            <div class="description_tab tab " role='tablist' tabindex="0">
-                                                <span>Description</span>
-                                            </div>
-                                             
-                                        </div>
-                                        <div class="tabs_items">
-                                            <div class="panel entry-content wc-tab tab_item" id="tab-description" role='tabpanel'  tabindex='0'>
-                                                <h2>Toy Description</h2>
-                                                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                                            </div>
-                                            
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-                              
-                        </div>
+                                        <div class="gridlist-buttonwrap">
+
+                            </div>
+
+
+                                        <hr />
+                                    </li>
+                                     <?php } ?>
+                                 </ul>
+    <!-- #page -->
+         </div>
+        
+     
+
+ 
+
+
+
+    
+          
+
+
+
+
+
+
+                                           </div>
+                                       
                     </main>
-                    <!-- / main content -->
+                    <!--  / main content -->
                 </div>
-                <!-- footer image container / -->
-                <div class="footer_image"></div>
                 <!-- pattern container / -->
                 <div class="right-pattern pattern pattern-2"></div>
+                <!-- footer image container / -->
+                <div class="footer_image"></div>
             </div>
+
             <!-- svg filter -->
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="0" style='display:none;'>
                 <defs>
@@ -343,31 +487,19 @@ function googleTranslateElementInit() {
             </footer>
             <!-- copyright -->
             <div class='copyrights_area'>
+                <!-- canvas -->
                 <div class='half_sin_wrapper'>
                     <canvas class='footer_half_sin' data-bg-color='14,64,77' data-line-color='14,64,77'></canvas>
                 </div>
+                <!-- / canvas -->
                 <div class='container'>
                     <div class='copyrights_container'>
-                        <div class='copyrights'><a target="_blank" href="https://www.templateshub.net">Developed by
-                    </a></div>
+                        <div class='copyrights'><a target="_blank" href="">developed by</a></div>
                         <div class='copyrights_panel'>
                             <div class='copyrights_panel_wrapper'>
                                 <div class="lang_bar">
                                     <div>
-                                        <ul>
-                                            <li>
-                                                <a href="#" class="lang_sel_sel icl-en"><img class="iclflag" src="img/en.png" alt="en" title="English" /> &nbsp;English
-                                                </a>
-                                                <ul>
-                                                    <li class="icl-fr">
-                                                        <a href="#"><img class="iclflag" src="img/fr.png" alt="fr" title="Français" />&nbsp;Français</a>
-                                                    </li>
-                                                    <li class="icl-de">
-                                                        <a href="#"><img class="iclflag" src="img/de.png" alt="de" title="Deutsch" />&nbsp;Deutsch</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
+                                        
                                     </div>
                                 </div>
                                 <div class='cws_social_links'><a href='http://twitter.com/' class='cws_social_link' title='Twitter'><i class='share-icon fa fa-twitter'></i></a><a href='http://facebook.com/' class='cws_social_link' title='Facebook'><i class='share-icon fa fa-facebook'></i></a><a href='http://dribbble.com/' class='cws_social_link' title='Dribbble'><i class='share-icon fa fa-dribbble'></i></a><a href='https://plus.google.com/' class='cws_social_link' title='Google'><i class='share-icon fa fa-google-plus'></i></a></div>
@@ -379,20 +511,10 @@ function googleTranslateElementInit() {
             <!-- / copyright -->
         </div>
     </div>
-    <!-- #page -->
+    
     <div class='scroll_top animated'></div>
     <div id="lang_sel_footer">
-        <ul>
-            <li>
-                <a href="#" class="lang_sel_sel"><img src="img/en.png" alt="English" class="iclflag" title="English" />&nbsp;English</a>
-            </li>
-            <li>
-                <a href="#"><img src="img/fr.png" alt="Français" class="iclflag" title="Français" />&nbsp;Français</a>
-            </li>
-            <li>
-                <a href="#"><img src="img/de.png" alt="Deutsch" class="iclflag" title="Deutsch" />&nbsp;Deutsch</a>
-            </li>
-        </ul>
+        
     </div>
     <script type='text/javascript' src='tuner/tuner/js/colorpicker.js'></script>
     <script type='text/javascript' src='tuner/tuner/js/scripts.js'></script>
@@ -407,7 +529,8 @@ function googleTranslateElementInit() {
     <script type='text/javascript' src='js/jquery.validate.min.js'></script>
     <script type='text/javascript' src="js/jquery.form.min.js"></script>
     <script type='text/javascript' src='js/scripts.js'></script>
-    <script type='text/javascript' src="js/jquery.tweet.js"></script>
+
+ 
 </body>
 
 </html>

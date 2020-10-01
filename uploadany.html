@@ -14,6 +14,9 @@
     <link rel='stylesheet' href='css/animate.css' type='text/css' media='all' />
     <link rel='stylesheet' href='css/main.css' type='text/css' media='all' />
     <link rel='stylesheet' href='css/shop.css' type='text/css' media='all' />
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>  
     <script type='text/javascript' src='js/jquery.js'></script>
     <script type='text/javascript' src='js/jquery-migrate.min.js'></script>
         <script type='text/javascript' src='revslider/js/jquery.themepunch.tools.min.js'></script>
@@ -52,9 +55,7 @@ function googleTranslateElementInit() {
                 <div class='row_text_search'>
                     <div id='top_panel_text'><a href="tel:1-800-123-45678"><i class="fa fa-phone-square"></i> 009-715-691-74949 </a>;
                         <a href="mailto:mail@mail.com"> <i class="fa fa-envelope-o"></i>nadhim_skander@yahoo.fr</a>
-                                  <a href="page-profile.php"> <i class="fa fa-person-o"></i>my profile</a>
                     </div>
-
                     <form method="get" class="search-form" action="#">
                         <label>
                             <span class="screen-reader-text">Search for:</span>
@@ -70,10 +71,46 @@ function googleTranslateElementInit() {
                         <div class='share-toggle-button'><i class='share-icon fa fa-share-alt'></i></div>
                         <div class='cws_social_links'><a href='http://twitter.com/' class='cws_social_link' title='Twitter'><i class='share-icon fa fa-twitter'></i></a><a href='http://facebook.com/' class='cws_social_link' title='Facebook'><i class='share-icon fa fa-facebook'></i></a><a href='http://dribbble.com/' class='cws_social_link' title='Dribbble'><i class='share-icon fa fa-dribbble'></i></a><a href='https://plus.google.com/' class='cws_social_link' title='Google'><i class='share-icon fa fa-google-plus'></i></a></div>
                     </div>
-                   
+                    <div class='mini-cart'> <a class="woo_icon" href="features-shop-cart.html" title="View your shopping cart"><i class='woo_mini-count fa fa-shopping-cart'><span>2</span></i></a>
+                        <div class="woo_mini_cart">
+                            <!-- start product list -->
+                            <ul class="cart_list product_list_widget">
+                                <li>
+                                    <a href="#" class="remove" title="Remove this item">×</a>
+                                    <a href="shop-single-product.html">
+                                        <img width="180" height="180" src="pic/shop/58x58-bag.jpg" class="attachment-shop_thumbnail" alt="poster_2_up">Bag&nbsp; </a>
+                                  
+                                </li>
+                                <li>
+                                    <a href="#" class="remove" title="Remove this item">×</a>
+                                    <a href="shop-single-product.html">
+                                        <img width="180" height="180" src="pic/shop/58x58-basket.jpg" class="attachment-shop_thumbnail" alt="T_7_front">Basket&nbsp; </a>
+                              
+                                </li>
+                            </ul>
+                            <!-- end product list -->
+                     
+                            <p class="buttons">
+                                <a href="features-shop-cart.html" class="button wc-forward">View Cart</a>
+                                <a href="features-shop-checkout.html" class="button checkout wc-forward">Checkout</a>
+                            </p>
+                        </div>
+                    </div>
                     <div class="lang_bar">
                         <div>
-                          
+                            <ul>
+                                <li>
+                       
+                                    </a>
+                                    <ul>
+                                        <li class="icl-fr">
+                                    
+                                        </li>
+                                        <li class="icl-de">
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -116,7 +153,7 @@ function googleTranslateElementInit() {
                                             </a>
                                             <span class='button_open'></span>
                                             <ul class="sub-menu">
-                                                <li class="menu-item back"><a href="index.html"><em>←</em>&nbsp;BACK</a>
+                                                <li class="menu-item back"><a href="#"><em>←</em>&nbsp;BACK</a>
                                                 </li>
                                    
                                             </ul>
@@ -157,7 +194,7 @@ function googleTranslateElementInit() {
                                                 </div>
                                             </a>
                                         </li>
-                                        <li class="menu-item right bees-end current-menu-item page_item current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor">
+                                        <li class="menu-item right bees-end ">
                                             <a href="contact-us.html">
                                                 <div class="bees bees-end"><span></span>
                                                     <div class="line-one"></div>
@@ -184,8 +221,8 @@ function googleTranslateElementInit() {
         <section class='page_title wave'>
             <div class='container'>
                 <div class='title'>
-                    <h1>Contact us</h1></div>
-                <nav class="bread-crumbs"><a href="index-2.html" >Home</a><i class="delimiter fa fa-chevron-right"></i><span class="current">Contact us</span></nav>
+                    <h1>Add here</h1></div>
+                <nav class="bread-crumbs"><a href="index.html" >Home</a><i class="delimiter fa fa-chevron-right"></i><span class="current">Contact us</span></nav>
                 <!-- .breadcrumbs -->
             </div>
             <canvas class='breadcrumbs' data-bg-color='#f8f2dc' data-line-color='#f9e8b2'></canvas>
@@ -199,143 +236,153 @@ function googleTranslateElementInit() {
                 <!-- main content -->
                 <main>
                     <!-- map -->
-                    <div class='grid_row clearfix' style='padding-top: 0px;padding-bottom: 0px;'>
-                        <div class='grid_col grid_col_12'>
-                            <div class='ce clearfix'>
-                                <h3 class="ce_title">How To Find Us</h3>
-                                <div class="map-border">
-                                    <div class="google-map">
-
-
-                                        <iframe src="https://maps.google.com/maps?width=100%25&amp;height=700&amp;hl=en&amp;q=downtown%20dubai+(VKidspace)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="1170" height="450" allowfullscreen></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- / map -->
-                    <div class='grid_row clearfix'>
-                        <!-- contact detail -->
-                        <div class='grid_col grid_col_4'>
-                            <div class='ce clearfix'>
-                                <h3 class="ce_title">Contact Details</h3>
-                                <div>
-                                    <div class='cws_fa_tbl'>
-                                        <div class='cws_fa_tbl_row'>
-                                            <div class='cws_fa_tbl_cell size_1x'>
-                                                <div class='cws_fa_wrapper'><i class='cws_fa fa fa-1x fa-location-arrow'></i><span class='ring'></span></div>
-                                            </div>
-                                            <div class='cws_fa_tbl_cell'>
-                                                <h2>Address:</h2></div>
-                                        </div>
-                                        <div class='cws_fa_tbl_row'>
-                                            <div class='cws_fa_tbl_cell'></div>
-                                            <div class='cws_fa_tbl_cell'>
-                                                <p>Downtown Dubai.
-                                                    <br />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class='cws_fa_tbl'>
-                                        <div class='cws_fa_tbl_row'>
-                                            <div class='cws_fa_tbl_cell size_1x'>
-                                                <div class='cws_fa_wrapper'><i class='cws_fa fa fa-1x fa-clock-o'></i><span class='ring'></span></div>
-                                            </div>
-                                            <div class='cws_fa_tbl_cell'>
-                                                <h2>Monday &#8211; Friday</h2></div>
-                                        </div>
-                                        <div class='cws_fa_tbl_row'>
-                                            <div class='cws_fa_tbl_cell'></div>
-                                            <div class='cws_fa_tbl_cell'>
-                                                <p>8:00AM &#8211; 5:00PM
-                                                    <br />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class='cws_fa_tbl'>
-                                        <div class='cws_fa_tbl_row'>
-                                            <div class='cws_fa_tbl_cell size_1x'>
-                                                <div class='cws_fa_wrapper'><i class='cws_fa fa fa-1x fa-phone'></i><span class='ring'></span></div>
-                                            </div>
-                                            <div class='cws_fa_tbl_cell'>
-                                                <h2>Phones:</h2></div>
-                                        </div>
-                                        <div class='cws_fa_tbl_row'>
-                                            <div class='cws_fa_tbl_cell'></div>
-                                            <div class='cws_fa_tbl_cell'>
-                                                <p><a href="tel:1-800-123-45678"> 00971 569174949 </a>
-                                                    <br />
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class='cws_fa_tbl'>
-                                        <div class='cws_fa_tbl_row'>
-                                            <div class='cws_fa_tbl_cell size_1x'>
-                                                <div class='cws_fa_wrapper'><i class='cws_fa fa fa-1x fa-envelope'></i><span class='ring'></span></div>
-                                            </div>
-                                            <div class='cws_fa_tbl_cell'>
-                                                <h2>E-mail:</h2></div>
-                                        </div>
-                                        <div class='cws_fa_tbl_row'>
-                                            <div class='cws_fa_tbl_cell'></div>
-                                            <div class='cws_fa_tbl_cell'>
-                                                <p><a href="mailto:mail@mail.com"> nadhim_skander@yahoo.fr</a>
-                                                    <br />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- / contact detail -->
-                        <!-- contact form -->
-                        <div class='grid_col grid_col_8'>
-                            <div class='ce clearfix'>
-                                <h3 class="ce_title">Drop us a line</h3>
+                    <div class='ce clearfix' align="a-center">
+                              
+                                <div class='cws_ce_content ce_tabs'>
+                                    <div class='tabs clearfix'><!-- 
+                                         --><div class='tab active' role='tablist' tabindex='0'><span>Toys</span></div><!-- 
+                                         --><div class='tab' role='tablist' tabindex='1'><span>Books</span></div><!-- 
+                                         --><div class='tab' role='tablist' tabindex='2'><span>Pets</span></div><!-- 
+                                  --></div>
+                                    <div class='tab_items'>
+                                        <div class='tab_item' role='tabpanel' tabindex='0'>
+                                             <div class='grid_row clearfix' style='padding-top: 0px;padding-bottom: 0px;'>
+                           <div class='ce clearfix'>
+                                <h3 class="ce_title">Add a toy</h3>
                                 <div>
                                     <div role="form" class="cf" id="cf-f16-p10-o1" lang="en-US" dir="ltr">
                                         <div class="screen-reader-response"></div>
-                                        <form name="contactform" action="contact-form-handler.php" method="post" class="cf-form contact-form" novalidate="novalidate">
-                                            <p>Name*
+                                           <form action="uploadtoy.php" method="post" enctype="multipart/form-data">
+                                            <p>Titre*
                                                 <br />
-                                                <span class="cf-form-control-wrap your-name"><input type="text" name="name" value="" size="107" class="cf-form-control cf-text cf-validates-as-required" aria-required="true" aria-invalid="false" /></span> </p>
-                                            <p>Email*
+                                                <span class="cf-form-control-wrap your-name"><input type="text" name="titre" value="" size="107" class="cf-form-control cf-text cf-validates-as-required" aria-required="true" aria-invalid="false" /></span> </p>
+                                           
+                                            <p>Description
                                                 <br />
-                                                <span class="cf-form-control-wrap your-email"><input type="email" name="email" value="" size="107" class="cf-form-control cf-text cf-email cf-validates-as-required cf-validates-as-email" aria-required="true" aria-invalid="false" /></span> </p>
-                                            <p>Message
-                                                <br />
-                                                <span class="cf-form-control-wrap your-message"><textarea name="message" cols="107" rows="8" class="cf-form-control cf-textarea" aria-invalid="false"></textarea></span> </p>
+                                                <span class="cf-form-control-wrap your-message"><textarea name="description" cols="107" rows="8" class="cf-form-control cf-textarea" aria-invalid="false"></textarea></span> </p>
                                             <p>
+                                         
+
+
+
+                                            <input type="file" name="fileToUpload" id="fileToUpload">
+                                            
+
                                                 <span class="captcha-wrapper">
                                                 </span>
-                                                <input type="submit" value="Send" class="cf-form-control cf-submit" />
+                                                <input onclick="Swal.fire({
+  position: 'top-end',
+  icon: 'success',
+  title: 'Your toy has been uploaded',
+  showConfirmButton: false,
+  timer: 1500
+})" type="submit" value="Send" name="submit"  />
                                             </p>
-                                            <div class="cws_msg_box error-box clearfix">
-                                                <div class="icon_section"><i class="fa fa-exclamation"></i></div>
-                                                <div class="content_section">
-                                                    <div class="msg_box_title">Error box</div>
-                                                    <div class="msg_box_text"></div>
+                                          
+                                                  
                                                 </div>
                                             </div>
                                         </form>
                                         <div class="email_server_responce"></div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <!-- / conatct form -->
-                    </div>
+                           
+                       
+                                        </div>
+                                        <div class='tab_item' role='tabpanel' tabindex='1' style='display:none;'>
+                                           <div class='grid_row clearfix' style='padding-top: 0px;padding-bottom: 0px;'>
+                           <div class='ce clearfix'>
+                                <h3 class="ce_title">Add a book</h3>
+                                <div>
+                                    <div role="form" class="cf" id="cf-f16-p10-o1" lang="en-US" dir="ltr">
+                                        <div class="screen-reader-response"></div>
+                                           <form action="uploadbook.php" method="post" enctype="multipart/form-data">
+                                            <p>Titre*
+                                                <br />
+                                                <span class="cf-form-control-wrap your-name"><input type="text" name="titre" value="" size="107" class="cf-form-control cf-text cf-validates-as-required" aria-required="true" aria-invalid="false" /></span> </p>
+                                           
+                                            <p>Description
+                                                <br />
+                                                <span class="cf-form-control-wrap your-message"><textarea name="description" cols="107" rows="8" class="cf-form-control cf-textarea" aria-invalid="false"></textarea></span> </p>
+                                            <p>
+                                         
 
-<script language="JavaScript">
-// Code for validating the form
-// Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
-// for details
-var frmvalidator  = new Validator("contactform");
-frmvalidator.addValidation("name","req","Please provide your name"); 
-frmvalidator.addValidation("email","req","Please provide your email"); 
-frmvalidator.addValidation("email","email","Please enter a valid email address"); 
-</script>
+
+
+                                            <input type="file" name="fileToUpload" id="fileToUpload">
+                                            
+
+                                                <span class="captcha-wrapper">
+                                                </span>
+                                                <input onclick="Swal.fire({
+  position: 'top-end',
+  icon: 'success',
+  title: 'Your book has been uploaded',
+  showConfirmButton: false,
+  timer: 1500
+})" type="submit" value="Send" name="submit"  />
+                                            </p>
+                                          
+                                                  
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div class="email_server_responce"></div>
+                                    </div>
+                                </div>
+                           
+                       
+                                        </div>
+                                        <div class='tab_item' role='tabpanel' tabindex='2' style='display:none;'>
+                                           <div class='grid_row clearfix' style='padding-top: 0px;padding-bottom: 0px;'>
+                           <div class='ce clearfix'>
+                                <h3 class="ce_title">Add a pet</h3>
+                                <div>
+                                    <div role="form" class="cf" id="cf-f16-p10-o1" lang="en-US" dir="ltr">
+                                        <div class="screen-reader-response"></div>
+                                           <form action="uploadpet.php" method="post" enctype="multipart/form-data">
+                                            <p>Titre*
+                                                <br />
+                                                <span class="cf-form-control-wrap your-name"><input type="text" name="titre" value="" size="107" class="cf-form-control cf-text cf-validates-as-required" aria-required="true" aria-invalid="false" /></span> </p>
+                                           
+                                            <p>Description
+                                                <br />
+                                                <span class="cf-form-control-wrap your-message"><textarea name="description" cols="107" rows="8" class="cf-form-control cf-textarea" aria-invalid="false"></textarea></span> </p>
+                                            <p>
+                                         
+
+
+
+                                            <input type="file" name="fileToUpload" id="fileToUpload">
+                                            
+
+                                                <span class="captcha-wrapper">
+                                                </span>
+                                                <input onclick="Swal.fire({
+  position: 'top-end',
+  icon: 'success',
+  title: 'Your pet has been uploaded',
+  showConfirmButton: false,
+  timer: 1500
+}) " type="submit" value="Send" name="submit"  />
+                                            </p>
+                                          
+                                                  
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div class="email_server_responce"></div>
+                                    </div>
+                                </div>
+                           
+                       
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                   
+                    <!-- / map -->
+               
                 </main>
                 <!-- / main content -->
                 <!-- patter container / -->
@@ -366,56 +413,9 @@ frmvalidator.addValidation("email","email","Please enter a valid email address")
             <!-- footer content -->
              <footer class='page_footer'>
                 <div class='container'>
-                    <div class='footer_container'>
-                        <!-- widget post -->
-                        <div class="cws-widget">
-                            <div class="widget-title">Contact us</div>
-                            <div class='widget_carousel'>
-                                <div class='item'>
-                                    <!-- post item -->
-                                    <div class='post_item'>
-                                        <div class='post_preview clearfix'>
-                                           
-                                                <div class='hover-effect'></div>
-                                              
-                                            </a>
-                                            <div class='post_title'><a href='blog-post.html'>number</a></div>
-                                      
-                                            <div class='post_date'>00971 569174949 </div>
-                                        </div>
-                                    </div>
-                                    <!-- / post item -->
-                                    <!-- post item -->
-                                    <div class='post_item'>
-                                        <div class='post_preview clearfix'>
-                                         
-                                                <div class='hover-effect'></div>
-                                            
-                                            </a>
-                                            <div class='post_title'><a href='blog-post.html'>email address</a></div>
-                                 
-                                            <div class='post_date'>nadhim_skander@yahoo.fr</div>
-                                        </div>
-                                    </div>
-                                    <!-- post item -->
-                                    <div class='post_item'>
-                                        <div class='post_preview clearfix'>
-                                    
-                                                <div class='hover-effect'></div>
-                                            </a>
-                                            <div class='post_title'><a href='blog-post.html'>Our current location</a></div>
-                                          
-                                            <div class='post_date'>downtown dubai</div>
-                                        </div>
-                                    </div>
-                                    <!-- / post item -->
-                                    <!-- post item -->
-                                    
-                                    </div>
-                                    <!-- / post item -->
-                                </div>
-                            </div>
-                        </div>
+               
+                         
+                           
                         <!-- / widget recent post -->
                         <!-- twitter -->
                         
