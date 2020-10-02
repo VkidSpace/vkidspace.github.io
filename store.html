@@ -1,3 +1,9 @@
+<?php
+
+
+require 'getwhatever.php';
+
+?>
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -16,6 +22,11 @@
     <link rel='stylesheet' href='css/main.css' type='text/css' media='all' />
     <link rel='stylesheet' href='css/shop.css' type='text/css' media='all' />
     <link rel='stylesheet' href='tuner/style.css' type='text/css' media='all' />
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>  
+
     <script type='text/javascript' src='js/jquery.js'></script>
     <script type='text/javascript' src='js/jquery-migrate.min.js'></script>
     <script type='text/javascript' src='revslider/js/jquery.themepunch.tools.min.js'></script>
@@ -30,7 +41,7 @@
     <meta name="msapplication-TileImage" content="img/cropped-favicon-270x270.png">
 </head>
 
-<body class="home page wide wave-style">
+<body class="archive post-type-archive post-type-archive-product woocommerce woocommerce-page wide wave-style">
     <div id="google_translate_element"></div>
 
 <script type="text/javascript">
@@ -49,10 +60,11 @@ function googleTranslateElementInit() {
             </div>
             <div class='container'>
                 <div class='row_text_search'>
-             <div id='top_panel_text'><a href="tel:1-800-123-45678"><i class="fa fa-phone-square"></i> 009-715-691-74949 </a>;
+                    <div id='top_panel_text'><a href="tel:1-800-123-45678"><i class="fa fa-phone-square"></i> 009-715-691-74949 </a>;
                         <a href="mailto:mail@mail.com"> <i class="fa fa-envelope-o"></i>nadhim_skander@yahoo.fr</a>
+                                  <a href="page-profile.php"> <i class="fa fa-person-o"></i>my profile</a>
                     </div>
-                    </div>
+
                     <form method="get" class="search-form" action="#">
                         <label>
                             <span class="screen-reader-text">Search for:</span>
@@ -68,34 +80,10 @@ function googleTranslateElementInit() {
                         <div class='share-toggle-button'><i class='share-icon fa fa-share-alt'></i></div>
                         <div class='cws_social_links'><a href='http://twitter.com/' class='cws_social_link' title='Twitter'><i class='share-icon fa fa-twitter'></i></a><a href='http://facebook.com/' class='cws_social_link' title='Facebook'><i class='share-icon fa fa-facebook'></i></a><a href='http://dribbble.com/' class='cws_social_link' title='Dribbble'><i class='share-icon fa fa-dribbble'></i></a><a href='https://plus.google.com/' class='cws_social_link' title='Google'><i class='share-icon fa fa-google-plus'></i></a></div>
                     </div>
-                    <div class='mini-cart'> <a class="woo_icon" href="features-shop-cart.html" title="View your shopping cart"><i class='woo_mini-count fa fa-shopping-cart'><span>2</span></i></a>
-                        <div class="woo_mini_cart">
-                            <!-- start product list -->
-                            <ul class="cart_list product_list_widget">
-                                <li>
-                                    <a href="#" class="remove" title="Remove this item">×</a>
-                                    <a href="shop-single-product.html">
-                                        <img width="180" height="180" src="pic/shop/58x58-bag.jpg" class="attachment-shop_thumbnail" alt="poster_2_up">Bag&nbsp; </a>
-                                    <span class="quantity">1 × <span class="amount"></span></span>
-                                </li>
-                                <li>
-                                    <a href="#" class="remove" title="Remove this item">×</a>
-                                    <a href="shop-single-product.html">
-                                        <img width="180" height="180" src="pic/shop/58x58-basket.jpg" class="attachment-shop_thumbnail" alt="T_7_front">Basket&nbsp; </a>
-                                    <span class="quantity">1 × <span class="amount"></span></span>
-                                </li>
-                            </ul>
-                            <!-- end product list -->
-                            <p class="total"><strong>Subtotal:</strong> <span class="amount"></span></p>
-                            <p class="buttons">
-                                <a href="features-shop-cart.html" class="button wc-forward">View Cart</a>
-                                <a href="features-shop-checkout.html" class="button checkout wc-forward">Checkout</a>
-                            </p>
-                        </div>
-                    </div>
+                   
                     <div class="lang_bar">
                         <div>
-                           
+                          
                         </div>
                     </div>
                 </div>
@@ -127,7 +115,7 @@ function googleTranslateElementInit() {
                                     <ul id="menu-main-menu" class="main-menu menu-bees">
                                         <!-- menu item -->
                                         <li class="menu-item  menu-item-has-children bees-start">
-                                            <a href="pet.html">
+                                            <a href="pet.php">
                                                 <div class="bees bees-start"><span></span>
                                                     <div class="line-one"></div>
                                                     <div class="line-two"></div>
@@ -145,7 +133,7 @@ function googleTranslateElementInit() {
                                         </li>
                                         <!-- / menu item -->
                                         <!-- menu item -->
-                                        <li class="menu-item menu-item-has-children "><a href="features-shop.html">Books<div class="canvas_wrapper"><canvas class="menu_dashed"></canvas></div></a>
+                                        <li class="menu-item menu-item-has-children "><a href="features-shop.php">Books<div class="canvas_wrapper"><canvas class="menu_dashed"></canvas></div></a>
                                             <span class='button_open'></span>
                                             <ul class="sub-menu">
                                                 <li class="menu-item back"><a href="#"><em>←</em>&nbsp;BACK</a>
@@ -169,7 +157,7 @@ function googleTranslateElementInit() {
                                         <!-- / menu item -->
                                         <!-- menu item -->
                                          <li class="menu-item right current-menu-item page_item current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor ">
-                                            <a href="store.html">
+                                            <a href="store.php">
                                                 <div class="bees bees-end"><span></span>
                                                     <div class="line-one"></div>
                                                     <div class="line-two"></div>
@@ -313,7 +301,7 @@ function googleTranslateElementInit() {
                         </div>
                         <div class='cws_textwidget_content'>
                             <div class='text'>Books are no substitute for living, but they can add immeasurably to its richness. </div>
-                            <div class='link'><a href='features-shop.html' class='cws_button small'>Borrow books</a></div>
+                            <div class='link'><a href='features-shop.php' class='cws_button small'>Borrow books</a></div>
                         </div>
                     </div>
                     <div class="cws-widget">
@@ -324,7 +312,7 @@ function googleTranslateElementInit() {
                         </div>
                         <div class='cws_textwidget_content'>
                             <div class='text'>share a pet with your kid for one week. </div>
-                            <div class='link'><a href='store.html' class='cws_button small'>Get a pet</a></div>
+                            <div class='link'><a href='store.php' class='cws_button small'>Get a pet</a></div>
                         </div>
                     </div>
                     <!-- / benefits item -->
@@ -336,267 +324,424 @@ function googleTranslateElementInit() {
         </div>
         <!-- / benefits container -->
         <!-- main container -->
-        <div id="main" class="site-main">
-            <div class="page_content">
-                <!-- pattern container -->
+          <div id="main" class="site-main">
+            <div class="page_content single_sidebar">
+                <!-- pattern container / -->
                 <div class='left-pattern pattern pattern-2'></div>
-                <!-- main content -->
-                <main>
-                    
-                    <div class='grid_row clearfix' style='padding-bottom: 0px;'>
-                        <div class='grid_col grid_col_12'>
-                            <!-- best seling products -->
-                            <div class='ce clearfix'>
-                                <h3 class="ce_title">Toys</h3>
-                                <div>
-                                    <div class="woocommerce columns-4">
-                                        <ul class="products">
-                                            <!-- product item -->
-                                            <li class="first post-4654 product type-product status-publish has-post-thumbnail product_cat-clothing product_cat-hoodies product_cat-hoodies-2 shipping-taxable purchasable product-type-simple product-cat-clothing product-cat-hoodies product-cat-hoodies-2 instock">
-                                                <div class='media_part'>
-                                                    <div class='pic'>
-                                                        <img src='pic/shop/game5.jpg' data-at2x='pic/shop/game5.jpg' alt>
-                                                        <div class='links_popup animate'>
-                                                            <div class='link_cont'>
-                                                                <div class='link'>
-                                                                    <a class='fancy' href='pic/shop/game5.jpg'><i class='fa fa-camera'></i></a>
-                                                                    <div class='link-item-bounce'></div>
-                                                                </div>
-                                                                <div class='link'>
-                                                                    <a href='shop-single-product.html'><i class='fa fa-share'></i></a>
-                                                                    <div class='link-item-bounce'></div>
-                                                                </div>
-                                                            </div>
-                                                            <div class='link-toggle-button'>
-                                                                <i class='fa fa-plus link-toggle-icon'></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class='hover-effect'></div>
-                                                    </div>
-                                                </div>
-                                                <a href="shop-single-product.html"><h3>Lego</h3>
-</a>
-                                                <a href="http://html.cwsthemes.com/store/?add-to-cart=4654" rel="nofollow" data-product_id="4654" data-product_sku="" data-quantity="1" class="button add_to_cart_button product_type_simple">Borrow</a>
-                                            </li>
-                                            <!-- / product item -->
-                                            <!-- product item -->
-                                            <li class="post-70 product type-product status-publish has-post-thumbnail product_cat-posters sale shipping-taxable purchasable product-type-simple product-cat-posters instock">
-                                                <div class="sale-wrapper">
-                                                </div>
-                                                <div class='media_part'>
-                                                    <div class='pic'>
-                                                        <img  src='pic/shop/game4.jpg' data-at2x='pic/shop/game4.jpg' alt>
-                                                        <div class='links_popup animate'>
-                                                            <div class='link_cont'>
-                                                                <div class='link'>
-                                                                    <a class='fancy' href='pic/shop/game4.jpg'><i class='fa fa-camera'></i></a>
-                                                                    <div class='link-item-bounce'></div>
-                                                                </div>
-                                                                <div class='link'>
-                                                                    <a href='shop-single-product.html'><i class='fa fa-share'></i></a>
-                                                                    <div class='link-item-bounce'></div>
-                                                                </div>
-                                                            </div>
-                                                            <div class='link-toggle-button'>
-                                                                <i class='fa fa-plus link-toggle-icon'></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class='hover-effect'></div>
-                                                    </div>
-                                             
-                                                </div>
-                                                <a href="shop-single-product.html"><h3>Tract</h3>
-</a>
-                                                </span>
-                                                <a href="http://html.cwsthemes.com/store/?add-to-cart=70" rel="nofollow" data-product_id="70" data-product_sku="" data-quantity="1" class="button add_to_cart_button product_type_simple">Borrow</a>
-                                            </li>
-                                            <!-- / product item -->
-                                            <!-- product item -->
-                                            <li class="post-4655 product type-product status-publish has-post-thumbnail product_cat-clothing product_cat-hoodies product_cat-hoodies-2 shipping-taxable purchasable product-type-simple product-cat-clothing product-cat-hoodies product-cat-hoodies-2 instock">
-                                                <div class='media_part'>
-                                                    <div class='pic'>
-                                                        <img src='pic/shop/game6.png' data-at2x='pic/shop/game6.png' alt>
-                                                        <div class='links_popup animate'>
-                                                            <div class='link_cont'>
-                                                                <div class='link'>
-                                                                    <a class='fancy' href='pic/shop/game6.png'><i class='fa fa-camera'></i></a>
-                                                                    <div class='link-item-bounce'></div>
-                                                                </div>
-                                                                <div class='link'>
-                                                                    <a href='shop-single-product.html'><i class='fa fa-share'></i></a>
-                                                                    <div class='link-item-bounce'></div>
-                                                                </div>
-                                                            </div>
-                                                            <div class='link-toggle-button'>
-                                                                <i class='fa fa-plus link-toggle-icon'></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class='hover-effect'></div>
-                                                    </div>
-                                                </div>
-                                                <a href="shop-single-product.html"><h3>Horse</h3>
-</a>
-                                                <a href="http://html.cwsthemes.com/store/?add-to-cart=4655" rel="nofollow" data-product_id="4655" data-product_sku="" data-quantity="1" class="button add_to_cart_button product_type_simple">Borrow</a>
-                                            </li>
-                                            <!-- / product item -->
-                                            <!-- product item -->
-                                            <li class="last post-73 product type-product status-publish has-post-thumbnail product_cat-posters sale shipping-taxable purchasable product-type-simple product-cat-posters instock">
-                                                <div class="sale-wrapper">
-                                                </div>
-                                                <div class='media_part'>
-                                                    <div class='pic'>
-                                                        <img src='pic/shop/270x270-blue-car.jpg' data-at2x='pic/shop/270x270-blue-car.jpg' alt>
-                                                        <div class='links_popup animate'>
-                                                            <div class='link_cont'>
-                                                                <div class='link'>
-                                                                    <a class='fancy' href='pic/shop/blue-car.jpg'><i class='fa fa-camera'></i></a>
-                                                                    <div class='link-item-bounce'></div>
-                                                                </div>
-                                                                <div class='link'>
-                                                                    <a href='shop-single-product.html'><i class='fa fa-share'></i></a>
-                                                                    <div class='link-item-bounce'></div>
-                                                                </div>
-                                                            </div>
-                                                            <div class='link-toggle-button'>
-                                                                <i class='fa fa-plus link-toggle-icon'></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class='hover-effect'></div>
-                                                    </div>
-                                                    <div>
-                                                    </div>
-                                                </div>
-                                                <a href="shop-single-product.html"><h3>Blue Car</h3>
-</a>
-                                                </span>
-                                                <a href="description.html" rel="nofollow" data-product_id="73" data-product_sku="" data-quantity="1" class="button add_to_cart_button product_type_simple">Borrow</a>
-                                            </li>
-                                            <!-- / product item -->
-                                            <!-- product item -->
-                                            <li class="first post-4656 product type-product status-publish has-post-thumbnail product_cat-clothing product_cat-hoodies product_cat-hoodies-2 shipping-taxable purchasable product-type-simple product-cat-clothing product-cat-hoodies product-cat-hoodies-2 instock">
-                                                <div class='media_part'>
-                                                    <div class='pic'>
-                                                        <img src='pic/shop/game3.png' data-at2x='pic/shop/game3.png' alt>
-                                                        <div class='links_popup animate'>
-                                                            <div class='link_cont'>
-                                                                <div class='link'>
-                                                                    <a class='fancy' href='pic/shop/game3.png'><i class='fa fa-camera'></i></a>
-                                                                    <div class='link-item-bounce'></div>
-                                                                </div>
-                                                                <div class='link'>
-                                                                    <a href='shop-single-product.html'><i class='fa fa-share'></i></a>
-                                                                    <div class='link-item-bounce'></div>
-                                                                </div>
-                                                            </div>
-                                                            <div class='link-toggle-button'>
-                                                                <i class='fa fa-plus link-toggle-icon'></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class='hover-effect'></div>
-                                                    </div>
-                                                </div>
-                                                <a href="shop-single-product.html"><h3>superman</h3>
-</a>
-                                                <a href="http://html.cwsthemes.com/store/?add-to-cart=4656" rel="nofollow" data-product_id="4656" data-product_sku="" data-quantity="1" class="button add_to_cart_button product_type_simple">Borrow</a>
-                                            </li>
-                                            <!-- / product item -->
-                                            <!-- product item -->
-                                            <li class="post-4646 product type-product status-publish has-post-thumbnail product_cat-clothing product_cat-t-shirts sale shipping-taxable purchasable product-type-simple product-cat-clothing product-cat-t-shirts instock">
-                                                <div class="sale-wrapper">
-                                                </div>
-                                                <div class='media_part'>
-                                                    <div class='pic'>
-                                                        <img src='pic/shop/270x270-yellow-taxi.jpg' data-at2x='pic/shop/270x270-yellow-taxi.jpg' alt>
-                                                        <div class='links_popup animate'>
-                                                            <div class='link_cont'>
-                                                                <div class='link'>
-                                                                    <a class='fancy' href='pic/shop/yellow-taxi.jpg'><i class='fa fa-camera'></i></a>
-                                                                    <div class='link-item-bounce'></div>
-                                                                </div>
-                                                                <div class='link'>
-                                                                    <a href='shop-single-product.html'><i class='fa fa-share'></i></a>
-                                                                    <div class='link-item-bounce'></div>
-                                                                </div>
-                                                            </div>
-                                                            <div class='link-toggle-button'>
-                                                                <i class='fa fa-plus link-toggle-icon'></i>
-                                                            </div>
-                                                        </div>
-                                                        <div ></div>
-                                                    </div>
-                                                    <div >
-                                                    </div>
-                                                </div>
-                                                <a href="shop-single-product.html"><h3>Yellow taxi</h3>
-</a>
-                                                </span>
-                                                <a href="http://html.cwsthemes.com/store/?add-to-cart=4646" rel="nofollow" data-product_id="4646" data-product_sku="" data-quantity="1" class="button add_to_cart_button product_type_simple">Borrow</a>
-                                            </li>
-                                            <!-- / product item -->
-                                            <!-- product item -->
-                                            <li class="post-76 product type-product status-publish has-post-thumbnail product_cat-posters shipping-taxable purchasable product-type-simple product-cat-posters instock">
-                                                <div class='media_part'>
-                                                    <div class='pic'>
-                                                        <img src='pic/shop/game7.jpg' data-at2x='pic/shop/game7.jpg' alt>
-                                                        <div class='links_popup animate'>
-                                                            <div class='link_cont'>
-                                                                <div class='link'>
-                                                                    <a class='fancy' href='pic/shop/game7.jpg'><i class='fa fa-camera'></i></a>
-                                                                    <div class='link-item-bounce'></div>
-                                                                </div>
-                                                                <div class='link'>
-                                                                    <a href='shop-single-product.html'><i class='fa fa-share'></i></a>
-                                                                    <div class='link-item-bounce'></div>
-                                                                </div>
-                                                            </div>
-                                                            <div class='link-toggle-button'>
-                                                                <i class='fa fa-plus link-toggle-icon'></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class='hover-effect'></div>
-                                                    </div>
-                                                </div>
-                                                <a href="shop-single-product.html"><h3>Hero</h3>
-</a>
-                                                <a href="http://html.cwsthemes.com/store/?add-to-cart=76" rel="nofollow" data-product_id="76" data-product_sku="" data-quantity="1" class="button add_to_cart_button product_type_simple">Borrow</a>
-                                            </li>
-                                            <!-- / product item -->
-                                            <!-- product item -->
-                                            <li class="last post-4647 product type-product status-publish has-post-thumbnail product_cat-clothing product_cat-t-shirts shipping-taxable purchasable product-type-simple product-cat-clothing product-cat-t-shirts instock">
-                                                <div class='media_part'>
-                                                    <div class='pic'>
-                                                        <img src='pic/shop/game9.jpg' data-at2x='pic/shop/game9.jpg' alt>
-                                                        <div class='links_popup animate'>
-                                                            <div class='link_cont'>
-                                                                <div class='link'>
-                                                                    <a class='fancy' href='pic/shop/game9.jpg'><i class='fa fa-camera'></i></a>
-                                                                    <div class='link-item-bounce'></div>
-                                                                </div>
-                                                                <div class='link'>
-                                                                    <a href='shop-single-product.html'><i class='fa fa-share'></i></a>
-                                                                    <div class='link-item-bounce'></div>
-                                                                </div>
-                                                            </div>
-                                                            <div class='link-toggle-button'>
-                                                                <i class='fa fa-plus link-toggle-icon'></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <a href="shop-single-product.html"><h3>little car</h3>
-</a>
-                                                <a href="http://html.cwsthemes.com/store/?add-to-cart=4647" rel="nofollow" data-product_id="4647" data-product_sku="" data-quantity="1" class="button add_to_cart_button product_type_simple">Borrow</a>
-                                            </li>
-                                            <!-- / product item -->
-                                        </ul>
-                                    </div>
+                <div class="container">
+                    <!-- sidebar -->
+                    <aside class='sb_right'>
+                        <!-- widget search -->
+                        <div class="cws-widget">
+                            <form method="get" class="woocommerce-product-search" action="#">
+                                <label class="screen-reader-text">Search for:</label>
+                                <input type="search" class="search-field" placeholder="Search Products&hellip;" value="" name="s" title="Search for:" />
+                                <input type="submit" value="Search" />
+                                <input type="hidden" name="post_type" value="product" />
+                            </form>
+                        </div>
+                        <!-- / widget search -->
+                        <!-- widget cart -->
+                       <div class="cws-widget">
+                            <div class="widget-title">Profile</div>
+                            <div class="widget_shopping_cart_content">
+                                <div class="woo_mini_cart">
+                                    <!-- start list -->
+                                    <ul class="cart_list product_list_widget ">
+                                        <li>
+                                            <a href="page-profile.php">
+                                                <img src="<?php
+ 
+  echo $_SESSION['image'];?>" class="attachment-shop_thumbnail" alt="hoodie_4_front">go to your profile&nbsp; 
+                                        </li>
+                                  </a>
+                                    </ul>
+                                    <!-- end product list -->
+                             
+                        
+                                    </p>
                                 </div>
                             </div>
-                            <!-- / best seling products -->
                         </div>
-                    </div>
-                    <!-- category section -->
-                
+                        <!-- / widget cart -->
+                        <!-- widget top rated product -->
+                       
+                        <!-- / widget top rated product -->
+                        <!--  widget filtered by price -->
+                       
+                        <!-- / widget filtered by price -->
+                    </aside>
+                    <!-- / sidebar -->
+                    <!-- main -->
+                    <main>
+                        <div id="container">
+                            <div id="content" role="main">
+                                <!-- shop panel -->
+                                <div class="woo_panel">
+                                    <p class="woocommerce-result-count">
+                                        Showing 1&ndash;12 of 23 results</p>
+                                    <form class="woocommerce-ordering" method="get">
+                              
+                                    </form>
+                                    <nav class="gridlist-toggle">
+                                        <a href="#" id="grid" title="Grid view" class="active"><span class="dashicons dashicons-grid-view"></span> <em>Grid view</em></a><a href="#" id="list" title="List view"><span class="dashicons dashicons-exerpt-view"></span> <em>List view</em></a>
+                                    </nav>
+                                </div>
+                                <!-- / shop panel -->
+                                <!-- products -->
+                                <ul class="products">
+                                    <!-- product -->
+                                    <?php  foreach(getanytoy() as $v) { ?>
+                                        <?php  if ($v['borrower_id']!=NULL && $v['borrower_id']!=$_SESSION['iduser']) { ?>
+                                                               <li class="first post-70 product type-product status-publish has-post-thumbnail product_cat-posters sale shipping-taxable purchasable product-type-simple product-cat-posters instock">
+                                        <div id="<?php echo $v['toy_id'] ?>" class="sale-wrapper">
+                                            <span style="background-color:#FF0000;border-color:#c63107;color:#fff;"class="onsale" >Borrowed</span>
+                                        </div>
+                                        <div class='media_part'>
+                                            <div class='pic'>
+                                                <img src='<?php echo $v['pic']; ?>' data-at2x='<?php echo $v['pic']; ?>' alt>
+                                                <div class='links_popup animate'>
+                                                    <div class='link_cont'>
+                                                        <div class='link'>
+                                                            <a class='fancy' href='<?php echo $v['pic']; ?>'><i class='fa fa-camera'></i></a>
+                                                            <div class='link-item-bounce'></div>
+                                                        </div>
+                                                        <div class='link'>
+                                                            <a href='shop-single-product.html'><i class='fa fa-share'></i></a>
+                                                            <div class='link-item-bounce'></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class='link-toggle-button'>
+                                                        <i class='fa fa-plus link-toggle-icon'></i>
+                                                    </div>
+                                                </div>
+                                                <div class='hover-effect'></div>
+                                            </div>
+
+                             
+                                        </div>
+                                        <h3><?php echo $v['titre']; ?></h3>
+                                         <?php  foreach(getanyuser($v['seller_id']) as $p) {?> 
+                                        <a  id="<?php echo $p['id']; ?> " href="profile.php?id=<?php echo $p['id'] ?>" ><h6> <?php echo $p['nom']; ?>  <?php echo $p['prenom']; ?></h6><?php } ?>
+</a><?php $_SESSION['toy_id']=$v['toy_id'];?>
+<script type='text/javascript'>
+         function profile(x){ 
+  document.cookie="cookie_profile="+x;
+}
+    </script>
+                                     
+
+                                        </span>
+                                        <div class="prop-description">
+                                            <p><?php echo $v['description']; ?></p>
+                                            <p id="petpet" style="visibility: hidden;"><?php echo $v['toy_id']; ?></p>
+                                        </div>
+                                        <div class="gridlist-buttonwrap">
+
+                                            <form action="" method="post">
+<input id="bbbbb<?php echo $v['toy_id'] ?>" style="background-color:#FF0000;border-color:#c63107;color:#fff;visibility: visible;" type="button" class="cws_button small" name="someAction" value="already borrowed by someone" onclick="releasenow(<?php echo $v['toy_id'] ?>)" disabled />
+</form></div>
+
+                                        <hr />
+                                    </li>
+                                                                                              <script type="text/javascript">
+     function releasenow(x){ 
+    document.cookie="profile_viewer_uid="+x;
+    $.ajax({
+                    url: "releasetoy.php",
+                    type: "POST",
+                    cache: false,
+                    datas: {
+                    
+                        delete_id: x,
+
+                    },
+                    success: function () {
+                        console.log("true");
+                    },
+                    error: function () {
+                        console.log("false");
+                    }
+                });
+
+   document.getElementById(x).style.visibility = "hidden";
+
+document.getElementById("bbbbb"+x).style.visibility = "hidden";
+   document.getElementById("ppppp"+x).style.visibility = "visible";
+
+}
+</script>
+                                          
+                 
+ <?php } else if ($v['borrower_id']!=NULL) { ?>
+                       <li class="first post-70 product type-product status-publish has-post-thumbnail product_cat-posters sale shipping-taxable purchasable product-type-simple product-cat-posters instock">
+                                        <div id="<?php echo $v['toy_id'] ?>" class="sale-wrapper">
+                                            <span style="background-color:#ff4c7c;border-color:#c63107;color:#fff;"class="onsale" >Borrowed</span>
+                                        </div>
+                                        <div class='media_part'>
+                                            <div class='pic'>
+                                                <img src='<?php echo $v['pic']; ?>' data-at2x='<?php echo $v['pic']; ?>' alt>
+                                                <div class='links_popup animate'>
+                                                    <div class='link_cont'>
+                                                        <div class='link'>
+                                                            <a class='fancy' href='<?php echo $v['pic']; ?>'><i class='fa fa-camera'></i></a>
+                                                            <div class='link-item-bounce'></div>
+                                                        </div>
+                                                        <div class='link'>
+                                                            <a href='shop-single-product.html'><i class='fa fa-share'></i></a>
+                                                            <div class='link-item-bounce'></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class='link-toggle-button'>
+                                                        <i class='fa fa-plus link-toggle-icon'></i>
+                                                    </div>
+                                                </div>
+                                                <div class='hover-effect'></div>
+                                            </div>
+
+                             
+                                        </div>
+                                        <h3><?php echo $v['titre']; ?></h3>
+                                         <?php  foreach(getanyuser($v['seller_id']) as $p) {?> 
+                                        <a  id="<?php echo $p['id']; ?> " href="profile.php?id=<?php echo $p['id'] ?>" ><h6> <?php echo $p['nom']; ?>  <?php echo $p['prenom']; ?></h6><?php } ?>
+</a><?php $_SESSION['toy_id']=$v['toy_id'];?>
+<script type='text/javascript'>
+         function profile(x){ 
+  document.cookie="cookie_profile="+x;
+}
+    </script>
+                                     
+
+                                        </span>
+                                        <div class="prop-description">
+                                            <p><?php echo $v['description']; ?></p>
+                                            <p id="petpet" style="visibility: hidden;"><?php echo $v['toy_id']; ?></p>
+                                        </div>
+                                        <div class="gridlist-buttonwrap">
+
+                                            <form action="" method="post">
+  <input  id="ppppp<?php echo $v['toy_id'] ?>" type="button" style=" display: none;" class="cws_button small" name="someAction" value="Borrow" onclick="borrownow(<?php echo $v['toy_id'] ?>)"  /><input id="bbbbb<?php echo $v['toy_id'] ?>" style="background-color:#ff4c7c;border-color:#c63107;color:#fff;visibility: visible;" type="button" class="cws_button small" name="someAction" value="Release" onclick="releasenow(<?php echo $v['toy_id'] ?>)" />
+</form></div>
+
+                                        <hr />
+                                    </li>
+                                                                                              <script type="text/javascript">
+     function releasenow(x){ 
+
+
+
+           Swal.fire({
+  title: 'are you sure you want to release this toy?',
+  showDenyButton: true,
+  showCancelButton: true,
+  confirmButtonText: `Yes`,
+  denyButtonText: `No`,
+  customClass: {
+    cancelButton: 'order-1 right-gap',
+    confirmButton: 'order-2',
+    denyButton: 'order-3',
+  }
+}).then((result) => {
+  if (result.isConfirmed) {
+    document.cookie="profile_viewer_uid="+x;
+    $.ajax({
+                    url: "releasetoy.php",
+                    type: "POST",
+                    cache: false,
+                    datas: {
+                    
+                        delete_id: x,
+
+                    },
+                    success: function () {
+                        console.log("true");
+                    },
+                    error: function () {
+                        console.log("false");
+                    }
+                });
+
+   document.getElementById(x).style.visibility = "hidden";
+
+document.getElementById("bbbbb"+x).style.visibility = "hidden";
+   document.getElementById("ppppp"+x).style.display = "inline";
+
+
+ Swal.fire('Released!', '', 'success')
+  } else if (result.isDenied) {
+    Swal.fire('Not released', '', 'info')
+  }
+})
+
+
+
+}
+</script>
+                                    <?php  } else { ?>
+                                        <li class="first post-70 product type-product status-publish has-post-thumbnail product_cat-posters sale shipping-taxable purchasable product-type-simple product-cat-posters instock">
+                                       <div id="<?php echo $v['toy_id'] ?>" style="visibility: hidden;" class="sale-wrapper">
+                                            <span style="background-color:#ff4c7c;border-color:#c63107;color:#fff;"class="onsale" >Borrowed</span>
+                                        </div>
+                                        <div class='media_part'>
+                                            <div class='pic'>
+                                                <img src='<?php echo $v['pic']; ?>' data-at2x='<?php echo $v['pic']; ?>' alt>
+                                                <div class='links_popup animate'>
+                                                    <div class='link_cont'>
+                                                        <div class='link'>
+                                                            <a class='fancy' href='<?php echo $v['pic']; ?>'><i class='fa fa-camera'></i></a>
+                                                            <div class='link-item-bounce'></div>
+                                                        </div>
+                                                        <div class='link'>
+                                                            <a href='shop-single-product.html'><i class='fa fa-share'></i></a>
+                                                            <div class='link-item-bounce'></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class='link-toggle-button'>
+                                                        <i class='fa fa-plus link-toggle-icon'></i>
+                                                    </div>
+                                                </div>
+                                                <div class='hover-effect'></div>
+                                            </div>
+
+                             
+                                        </div>
+                                        <h3><?php echo $v['titre']; ?></h3>
+                                         <?php  foreach(getanyuser($v['seller_id']) as $p) {?> 
+                                        <a  id="<?php echo $p['id']; ?> " href="profile.php?id=<?php echo $p['id'] ?>" ><h6> <?php echo $p['nom']; ?>  <?php echo $p['prenom']; ?></h6><?php } ?>
+</a><?php $_SESSION['toy_id']=$v['toy_id'];?>
+<script type='text/javascript'>
+         function profile(x){ 
+  document.cookie="cookie_profile="+x;
+
+    </script>
+                                     
+
+                                        </span>
+                                        <div class="prop-description">
+                                            <p><?php echo $v['description']; ?></p>
+                                            <p id="petpet" style="visibility: hidden;"><?php echo $v['toy_id']; ?></p>
+                                        </div>
+                                        <div class="gridlist-buttonwrap">
+
+                                            <form action="" method="post">
+     <input  id="pppp<?php echo $v['toy_id'] ?>" type="button" class="cws_button small" name="someAction" value="Borrow" onclick="borrownow(<?php echo $v['toy_id'] ?>)" /><input id="bbbb<?php echo $v['toy_id'] ?>" style="background-color:#ff4c7c;border-color:#c63107;color:#fff;visibility: hidden;" type="button" class="cws_button small" name="someAction" value="Release" onclick="releasenow(<?php echo $v['toy_id']  ?>)"   />
+</form></div>
+
+
+                                        <hr />
+                                    </li>
+                                     <?php } ?>
+                                      
+                                      <?php } ?>
+                                      <script type='text/javascript'>
+         
+function borrownow(x){ 
+
+
+
+   Swal.fire({
+  title: 'are you sure you want to borrow this toy?',
+  showDenyButton: true,
+  showCancelButton: true,
+  confirmButtonText: `Yes`,
+  denyButtonText: `No`,
+  customClass: {
+    cancelButton: 'order-1 right-gap',
+    confirmButton: 'order-2',
+    denyButton: 'order-3',
+  }
+}).then((result) => {
+  if (result.isConfirmed) {
+
+      document.cookie="profile_viewer_uid="+x;
+    $.ajax({
+                    url: "borrowtoy.php",
+                    type: "POST",
+                    cache: false,
+                    datas: {
+                    
+                        delete_id: x,
+
+                    },
+                    success: function () {
+                        console.log("true");
+                    },
+                    error: function () {
+                        console.log("false");
+                    }
+                });
+
+
+ document.getElementById(x).style.visibility = "visible";
+document.getElementById("bbbb"+x).style.visibility = "visible";
+   document.getElementById("pppp"+x).style.display = "none";
+     
+
+    
+    Swal.fire('Borrowed!', '', 'success')
+  } else if (result.isDenied) {
+    Swal.fire('Not borrowed', '', 'info')
+  }
+})
+
+
+
+  
+
+
+}
+
+     </script>
+                                                                            
+  
+                                    
+
+                                    <!-- / product -->
+                                    <!-- product -->
+                                    
+                                    <!-- / product -->
+                                    <!-- product -->
+                                    
+                                    <!-- / product -->
+                                </ul>
+                                <!-- / product -->
+                                <!-- pagination -->
+                                <nav class="woocommerce-pagination">
+                                    <ul class="page-numbers">
+                                        <li><span class="page-numbers current">1</span></li>
+                                        <li><a class="page-numbers" href="#">2</a></li>
+                                        <li><a class="next page-numbers" href="#">→</a></li>
+                                    </ul>
+                                </nav>
+                                <!-- / pagination -->
+                            </div>
+                        </div>
+                    </main>
+                    <!-- / main -->
+                </div>
+                <!-- footer image container  / -->
+                <div class="footer_image"></div>
+                <!-- pattern container / -->
+                <div class='right-pattern pattern pattern-2'></div>
+            </div>
+            <!-- svg filter -->
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="0" style='display:none;'>
+                <defs>
+                    <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+                        <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                        <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+                    </filter>
+                </defs>
+            </svg>
+            <!-- / svg filter -->
+        </div>
+        <!-- #main -->
+        <!-- footer -->
+        <div class='footer_wrapper_copyright'>
+            <!-- canvas -->
+            <div class='half_sin_wrapper'>
+                <canvas class='half_sin' data-bg-color='23,108,129' data-line-color='23,108,129'></canvas>
             </div>
             <!-- svg filter -->
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="0" style='display:none;'>
@@ -644,7 +789,7 @@ function googleTranslateElementInit() {
     <!-- #page -->
     <div class='scroll_top animated'></div>
     <div id="lang_sel_footer">
-      
+
     </div>
     <script type='text/javascript' src='tuner/tuner/js/colorpicker.js'></script>
     <script type='text/javascript' src='tuner/tuner/js/scripts.js'></script>
